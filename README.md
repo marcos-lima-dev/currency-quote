@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# Currency Quote
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação moderna para acompanhamento de cotações de moedas em tempo real, com sistema de alertas e notificações.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Cotações em Tempo Real**: Acompanhamento das principais moedas via Exchange Rate API
+- **Gráficos Interativos**: Visualização histórica das cotações
+- **Sistema de Alertas**: Notificações personalizáveis para variações de preço
+- **Tema Escuro**: Suporte a dark/light mode
+- **Design Responsivo**: Interface adaptativa para todos os dispositivos
+- **Dados Persistentes**: Configurações e preferências salvas localmente
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Context API
+- Tailwind CSS
+- Exchange Rate API
+- Push Notifications API
 
-- Configure the top-level `parserOptions` property like this:
+## 📦 Instalação
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+```bash
+# Clone o repositório
+git clone https://github.com/marcos-lima-dev/currency-quote.git
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# Entre no diretório
+cd currency-quote
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+# Instale as dependências
+npm install
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+# Execute o projeto
+npm run dev
 ```
